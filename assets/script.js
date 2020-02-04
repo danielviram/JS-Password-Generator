@@ -10,23 +10,7 @@ let uppercaseChar=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","
 let numericChar=["1","2","3","4","5","6","7","8","9","0"];
 let specialChar=["!","@","#","$","%","^","&","*","(",")","{","}","|","[","]",";","'",":","<",">","?","/"];
 
-// for (let i = 0; i < Math.floor(specialChar.length); i++) {
-//     console.log(specialChar[i]);
-// }
-//// test the special characters to see what needs escape characters using a loop
-
-// WHEN prompted for password criteria
-// THEN I select which criteria to include in the password
-
-// WHEN prompted for character types to include in the password
-// THEN I choose lowercase, uppercase, numeric, and/or special characters
-
-// WHEN I answer each prompt
-// THEN my input should be validated and at least one character type should be selected
-
-//// create an if statement - if user does not select at least one type of character, then they have to start over
-//// use a while loop to check if the use variables are undefined - if so, run the loop
-//// use an if statement to see if they are all false
+//// use a loop - if user does not select at least one type of character, then they have to start over
 
 // declaring boolean variables, asking user for input
 let useLowerCase=confirm("Do you want to include lowercase characters?");
@@ -42,8 +26,6 @@ while (useLowerCase == false && useUpperCase == false && useNumeric == false && 
     useNumeric=confirm("Do you want to include numeric characters?");
     useSpecial=confirm("Do you want to include special characters?");
 }
-// WHEN prompted for the length of the password
-// THEN I choose a length of at least 8 characters and no more than 128 characters
 
 // while loop to check for password length. If number less than 8 or over 128, or if input is a string or NaN, user is asked for input again
 
