@@ -3,7 +3,6 @@
 
 //// something something DOM
 
-
 //// create arrays for all lowercase, upercase, numeric, and special characters
 
 let lowercaseChar=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
@@ -19,7 +18,10 @@ let specialChar=["!","@","#","$","%","^","&","*","(",")","{","}","|","[","]",";"
 // WHEN prompted for character types to include in the password
 // THEN I choose lowercase, uppercase, numeric, and/or special characters
 
-////use a loop to check if all are not selected - if so, user has to restart and select at least one
+// WHEN I answer each prompt
+// THEN my input should be validated and at least one character type should be selected
+
+//// create an if statement - if user does not select at least one type of character, then they have to start over
 
 let useLowercase=confirm("Do you want to include lowercase characters?");
 let useUppercase=confirm("Do you want to include uppercase characters?");
@@ -34,15 +36,13 @@ let useSpecial=confirm("Do you want to include special characters?");
 
 let passwordLength=prompt("How many characters do you want the password to be?")
 
-// WHEN I answer each prompt
-// THEN my input should be validated and at least one character type should be selected
-
-//// create an if statement - if user does not select at least one type of character, then they have to start over
-
 // WHEN all prompts are answered
 // THEN a password is generated that matches the selected criteria
 
+////use Math.random() to randomly index through
+////create an array of the selected character types, randomly select one from the array, and then a random index from the selected array 
 
 // WHEN the password is generated
 // THEN the password is either displayed in an alert or written to the page
 
+////something something DOM
