@@ -4,7 +4,8 @@
 //// something something DOM
 
 //// create arrays for all lowercase, upercase, numeric, and special characters
-
+let passwordResult="";
+let caseArray=[];
 let lowercaseChar=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 let uppercaseChar=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","W","X","Y","Z"];
 let numericChar=["1","2","3","4","5","6","7","8","9","0"];
@@ -40,6 +41,19 @@ while(passwordLength <= 8 || passwordLength >= 128 || typeof(passwordLength) != 
 
 ////use Math.random() to randomly index through
 ////create an array of the selected character types, randomly select one from the array, and then a random index from the selected array 
+
+if (useLowerCase==true){
+    
+}
+if (useUpperCase==true){
+
+}
+if (useNumeric==true){
+
+}
+if (useSpecial==true){
+    
+}
 
 //// if character type is selected, the array name is stored into a group array
 //// a loop is run for the length of the password
