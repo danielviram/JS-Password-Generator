@@ -40,23 +40,23 @@ while(passwordLength <= 8 || passwordLength >= 128 || typeof(passwordLength) != 
 // THEN a password is generated that matches the selected criteria
 
 if (useLowerCase==true){
-    caseArray.push("lowerCaseChar")
+    caseArray.push(lowerCaseChar);
    
 }
 if (useUpperCase==true){
-    caseArray.push("specialCaseChar")
+    caseArray.push(upperCaseChar)
    
 }
 if (useNumeric==true){
-    caseArray.push("numericChar")
+    caseArray.push(numericChar)
     
 }
 if (useSpecial==true){
-    caseArray.push("specialChar")
+    caseArray.push(specialChar)
 }
 
 // testing caseArray
-// console.log("caseArray has " + caseArray.length + " arrays nested inside. Those arrays are" )
+// console.log("caseArray has " + caseArray.length + " arrays nested inside. Those arrays are" );
 // for (let i = 0; i < caseArray.length; i++) {
 //     console.log(caseArray[i]);
 // }
@@ -67,18 +67,26 @@ if (useSpecial==true){
 //// a random number is generated for the character array (length of character array)
 
 for(let i=0;i<passwordLength;i++){
-    // console.log(i); //testing for loop. should print out as many numbers as there are in the length
+
+    let randomCharArrayNum;
+    let selectedCharArray;
+    let randomCharNum;
+    let randomChar;
     
-    let randomCharArrayNum= parseInt(Math.floor(Math.random()*caseArray.length));
+    randomCharArrayNum= parseInt(Math.floor(Math.random()*caseArray.length)); //random number based on length of case array
+    selectedCharArray=caseArray[randomCharArrayNum]; //variable that stores selected array from case array
     //console.log("The array has " + caseArray.length + " entries"); //testing length of caseArray
     //console.log(randomCharArrayNum); //testing random number generated based on length of caseArray
 
-    let selectedCharArray=caseArray[randomCharArrayNum]; //variable that stores selected array from case array
+    randomCharNum=Math.floor(Math.random()*selectedCharArray.length);// variable that stores random number based on length of selected array
 
-    let randomCharNum=Math.floor(Math.random()*selectedCharArray.length);// variable that stores random number based on length of selected array
+    // console.log("The selected Array is the " + selectedCharArray); //testing array chosen
+    // console.log("The selected random index is " + randomCharNum); //testing random number generation based on chosen array length 
 
-    console.log("The selected Array is the " + selectedCharArray);
-    console.log("The selected random index is " + randomCharNum);
+    randomChar=selectedCharArray[randomCharNum];
+    console.log(randomChar);
+    // console.log("Your random character array num is " + randomCharArrayNum + " and your random character number is " + randomCharNum);
+
 }
 
 // WHEN the password is generated
