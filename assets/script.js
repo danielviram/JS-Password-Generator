@@ -4,7 +4,6 @@
 //// something something DOM
 
 //// create arrays for all lowercase, upercase, numeric, and special characters
-let passwordResult="";
 let caseArray=[];
 let lowerCaseChar=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 let upperCaseChar=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","W","X","Y","Z"];
@@ -39,6 +38,8 @@ while(passwordLength <= 8 || passwordLength >= 128 || typeof(passwordLength) != 
 // WHEN all prompts are answered
 // THEN a password is generated that matches the selected criteria
 
+//// if character type is selected, the array name is stored into a group array
+
 if (useLowerCase==true){
     caseArray.push(lowerCaseChar);
    
@@ -55,16 +56,7 @@ if (useSpecial==true){
     caseArray.push(specialChar)
 }
 
-// testing caseArray
-// console.log("caseArray has " + caseArray.length + " arrays nested inside. Those arrays are" );
-// for (let i = 0; i < caseArray.length; i++) {
-//     console.log(caseArray[i]);
-// }
-
-//// if character type is selected, the array name is stored into a group array
 //// a loop is run for the length of the password
-//// a random number is generated for the group array (length of group array)
-//// a random number is generated for the character array (length of character array)
 
 for(let i=0;i<passwordLength;i++){
 
@@ -72,9 +64,15 @@ for(let i=0;i<passwordLength;i++){
     let selectedCharArray;
     let randomCharNum;
     let randomChar;
+
+    //// a random number is generated for the group array (length of group array)
     
     randomCharArrayNum= parseInt(Math.floor(Math.random()*caseArray.length)); //random number based on length of case array
+    
+    //// a random number is generated for the character array (length of character array)
+
     selectedCharArray=caseArray[randomCharArrayNum]; //variable that stores selected array from case array
+    
     //console.log("The array has " + caseArray.length + " entries"); //testing length of caseArray
     //console.log(randomCharArrayNum); //testing random number generated based on length of caseArray
 
@@ -87,6 +85,7 @@ for(let i=0;i<passwordLength;i++){
     console.log(randomChar);
     // console.log("Your random character array num is " + randomCharArrayNum + " and your random character number is " + randomCharNum);
 
+    // now, need to accumulate the string
 }
 
 // WHEN the password is generated
