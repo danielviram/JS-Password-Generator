@@ -39,9 +39,6 @@ while(passwordLength <= 8 || passwordLength >= 128 || typeof(passwordLength) != 
 // WHEN all prompts are answered
 // THEN a password is generated that matches the selected criteria
 
-////use Math.random() to randomly index through
-////create an array of the selected character types, randomly select one from the array, and then a random index from the selected array 
-
 if (useLowerCase==true){
     caseArray.push("lowerCaseChar")
    
@@ -58,10 +55,11 @@ if (useSpecial==true){
     caseArray.push("specialChar")
 }
 
-console.log("caseArray has " + caseArray.length + " arrays nested inside. Those arrays are" )
-for (let i = 0; i < caseArray.length; i++) {
-    console.log(caseArray[i]);
-}
+// testing caseArray
+// console.log("caseArray has " + caseArray.length + " arrays nested inside. Those arrays are" )
+// for (let i = 0; i < caseArray.length; i++) {
+//     console.log(caseArray[i]);
+// }
 
 //// if character type is selected, the array name is stored into a group array
 //// a loop is run for the length of the password
@@ -69,7 +67,18 @@ for (let i = 0; i < caseArray.length; i++) {
 //// a random number is generated for the character array (length of character array)
 
 for(let i=0;i<passwordLength;i++){
-    console.log(i); //testing for loop. should print out as many numbers as there are in the length
+    // console.log(i); //testing for loop. should print out as many numbers as there are in the length
+    
+    let randomCharArrayNum= parseInt(Math.floor(Math.random()*caseArray.length));
+    //console.log("The array has " + caseArray.length + " entries"); //testing length of caseArray
+    //console.log(randomCharArrayNum); //testing random number generated based on length of caseArray
+
+    let selectedCharArray=caseArray[randomCharArrayNum]; //variable that stores selected array from case array
+
+    let randomCharNum=Math.floor(Math.random()*selectedCharArray.length);// variable that stores random number based on length of selected array
+
+    console.log("The selected Array is the " + selectedCharArray);
+    console.log("The selected random index is " + randomCharNum);
 }
 
 // WHEN the password is generated
