@@ -6,8 +6,8 @@
 //// create arrays for all lowercase, upercase, numeric, and special characters
 let passwordResult="";
 let caseArray=[];
-let lowercaseChar=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-let uppercaseChar=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","W","X","Y","Z"];
+let lowerCaseChar=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+let upperCaseChar=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","W","X","Y","Z"];
 let numericChar=["1","2","3","4","5","6","7","8","9","0"];
 let specialChar=["!","@","#","$","%","^","&","*","(",")","{","}","|","[","]",";","'",":","<",">","?","/"];
 
@@ -43,16 +43,24 @@ while(passwordLength <= 8 || passwordLength >= 128 || typeof(passwordLength) != 
 ////create an array of the selected character types, randomly select one from the array, and then a random index from the selected array 
 
 if (useLowerCase==true){
-    
+    caseArray.push("lowerCaseChar")
+   
 }
 if (useUpperCase==true){
-
+    caseArray.push("specialCaseChar")
+   
 }
 if (useNumeric==true){
-
+    caseArray.push("numericChar")
+    
 }
 if (useSpecial==true){
-    
+    caseArray.push("specialChar")
+}
+
+console.log("caseArray has " + caseArray.length + " arrays nested inside. Those arrays are" )
+for (let i = 0; i < caseArray.length; i++) {
+    console.log(caseArray[i]);
 }
 
 //// if character type is selected, the array name is stored into a group array
