@@ -36,7 +36,7 @@ while (useLowerCase == false && useUpperCase == false && useNumeric == false && 
 // while loop to check for password length. If number less than 8 or over 128, or if input is a string or NaN, user is asked for input again
 
 let passwordLength=parseInt(prompt("How many characters do you want the password to be? The password cannot be less than 8 or more than 128 characters."));
-while(passwordLength < 8 || passwordLength > 128 || typeof(passwordLength) != "number" || passwordLength == NaN || passwordLength != null) {
+while(passwordLength < 8 || passwordLength > 128 || typeof(passwordLength) != "number" || passwordLength == NaN || passwordLength == null) {
     alert("Please choose a number that is more than 8 and less than 128 characters");
     passwordLength=parseInt(prompt("How many characters do you want the password to be? The password cannot be less than 8 or more than 128 characters."));
 } 
