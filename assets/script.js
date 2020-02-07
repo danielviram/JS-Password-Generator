@@ -3,7 +3,8 @@
 
 //// something something DOM
 
-//// create arrays for all lowercase, upercase, numeric, and special characters
+//// create arrays for all lowercase, upercase, numeric, and special characters & a variable for the password string
+let passwordString="";
 let caseArray=[];
 let lowerCaseChar=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 let upperCaseChar=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","W","X","Y","Z"];
