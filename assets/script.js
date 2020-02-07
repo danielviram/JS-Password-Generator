@@ -1,7 +1,4 @@
-// WHEN I click the button to generate a password
-// THEN I am presented with a series of prompts for password criteria
 
-//// something something DOM
 
 //// create arrays for all lowercase, upercase, numeric, and special characters & a variable for the password string
 let passwordString="";
@@ -19,6 +16,14 @@ let useUpperCase=confirm("Do you want to include uppercase characters?");
 let useNumeric=confirm("Do you want to include numeric characters?");
 let useSpecial=confirm("Do you want to include special characters?");
 
+
+// WHEN I click the button to generate a password
+// THEN I am presented with a series of prompts for password criteria
+
+//// set up dom event listening - clicking on the "generate" button triggers the script below
+
+//// something something DOM
+
 //running loop to check if all variables are false. If so, user is prompted to select again
 while (useLowerCase == false && useUpperCase == false && useNumeric == false && useSpecial == false) {
     alert("Please select one type of character");
@@ -31,7 +36,7 @@ while (useLowerCase == false && useUpperCase == false && useNumeric == false && 
 // while loop to check for password length. If number less than 8 or over 128, or if input is a string or NaN, user is asked for input again
 
 let passwordLength=parseInt(prompt("How many characters do you want the password to be? The password cannot be less than 8 or more than 128 characters."));
-while(passwordLength <= 8 || passwordLength >= 128 || typeof(passwordLength) != "number" || passwordLength == NaN) {
+while(passwordLength < 8 || passwordLength > 128 || typeof(passwordLength) != "number" || passwordLength == NaN || passwordLength != null) {
     alert("Please choose a number that is more than 8 and less than 128 characters");
     passwordLength=parseInt(prompt("How many characters do you want the password to be? The password cannot be less than 8 or more than 128 characters."));
 } 
