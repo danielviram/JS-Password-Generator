@@ -87,9 +87,13 @@ for(let i=0;i<passwordLength;i++){
     // console.log("Your random character array num is " + randomCharArrayNum + " and your random character number is " + randomCharNum);
 
     // now, need to accumulate the string
+    passwordString+=randomChar;
 }
+
 
 // WHEN the password is generated
 // THEN the password is either displayed in an alert or written to the page
+
+console.log("Your password is " + passwordString);
 
 ////something something DOM
