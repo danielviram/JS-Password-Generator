@@ -87,7 +87,7 @@ function generatePassword() {
     }
     //console.log("Your password is " + passwordString);
     //alert("Your password is " + passwordString);
-    passwordEntry.textContent="Your password is " + passwordString;    
+    passwordEntry.textContent=passwordString;    
 }
 
 // WHEN the password is generated
