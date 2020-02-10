@@ -1,4 +1,5 @@
-
+generateButton=document.getElementById("generateButton");
+passwordEntry=document.getElementById("passwordEntry");
 
 //// create arrays for all lowercase, upercase, numeric, and special characters & a variable for the password string
 let passwordString="";
@@ -100,5 +101,6 @@ for(let i=0;i<passwordLength;i++){
 // THEN the password is either displayed in an alert or written to the page
 
 console.log("Your password is " + passwordString);
+alert("Your password is " + passwordString);
 
 ////something something DOM
