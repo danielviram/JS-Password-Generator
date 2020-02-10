@@ -102,5 +102,6 @@ for(let i=0;i<passwordLength;i++){
 
 console.log("Your password is " + passwordString);
 alert("Your password is " + passwordString);
+passwordEntry.textContent="Your password is " + passwordString;
 
 ////something something DOM
