@@ -1,4 +1,5 @@
 # JS-Password-Generator
+
 Password Generated created in Javascript
 
 ## Contents of Project
@@ -41,6 +42,15 @@ THEN the password is either displayed in an alert or written to the page
 
 ## Satisfying the Acceptance Criteria
 
+To satisfy the first criteria, a button was created in HTML and set up so that, when clicked, would fire the password generator script. 
+
+To satisfy the second, third, and fourth criteria, a series of prompts are used to determine what kinds of characters the user wants to include as well as how many characters in the password are desired.
+
+To satisfy the fifth criteria, the character prompts are checked to see if all are false. If so, the questions are asked again. The password length prompt checks for input above or below a certain threshold as well as NaN, null, and inputs that are not numbers.
+
+To satisfy the sixth criteria, four character arrays are created with uppercase letters, lowercase letters, special characters, and numbers. Arrays to be included in password generation are pushed into an array. A loop is run for the length of the password, and two random numbers are generated. The first random number chooses which character array will be used and the second chooses a random charcter from the selected array. The character is then concatenated into a password string variable.
+
+To satisfy the seventh criteria, the script modifies the HTML page to display the password after the password has been generated.
 
 ## Issues
 
@@ -53,3 +63,5 @@ Along with the previous idea of using a form with a number box, there are other 
 Checkboxes could be used to select what kinds of values should be included in the password generation and a text area box could be used for password display. Approrpiate form aria attributes could also be used to improve the accessibility of the page.
 
 The index could also be modified to be more inline with any potential portfolio website. 
+
+A second button could also be added to copy the contents of the password into the clipboard.
