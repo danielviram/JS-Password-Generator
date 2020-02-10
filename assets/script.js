@@ -1,7 +1,3 @@
-
-
-
-
 //// create arrays for all lowercase, upercase, numeric, and special characters & a variable for the password string
 let passwordString="";
 let caseArray=[];
@@ -10,15 +6,7 @@ let upperCaseChar=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","
 let numericChar=["1","2","3","4","5","6","7","8","9","0"];
 let specialChar=["!","@","#","$","%","^","&","*","(",")","{","}","|","[","]",";","'",":","<",">","?","/"];
 
-//// use a loop - if user does not select at least one type of character, then they have to start over
-
-
-// WHEN I click the button to generate a password
-// THEN I am presented with a series of prompts for password criteria
-
-//// set up dom event listening - clicking on the "generate" button triggers the script below
-
-//// something something DOM
+// creating a function for generating the password
 function generatePassword() {
 
     // declaring boolean variables, asking user for input
@@ -43,9 +31,6 @@ function generatePassword() {
         alert("Please choose a number that is more than 8 and less than 128 characters");
         passwordLength=parseInt(prompt("How many characters do you want the password to be? The password cannot be less than 8 or more than 128 characters."));
     } 
-
-    // WHEN all prompts are answered
-    // THEN a password is generated that matches the selected criteria
 
     //// if character type is selected, the array name is stored into a group array
 
@@ -97,18 +82,15 @@ function generatePassword() {
         // now, need to accumulate the string
         passwordString+=randomChar;
         //return passwordString;
+        
     }
-    return passwordString;
+    //console.log("Your password is " + passwordString);
+    //alert("Your password is " + passwordString);
+    passwordEntry.textContent="Your password is " + passwordString;    
 }
 
 // WHEN the password is generated
 // THEN the password is either displayed in an alert or written to the page
-generateButton=document.getElementById("generateButton");
-passwordEntry=document.getElementById("passwordEntry");
+let generateButton=document.getElementById("generateButton");
+let passwordEntry=document.getElementById("passwordEntry");
 generateButton.onclick = generatePassword;
-
-//console.log("Your password is " + passwordString);
-//alert("Your password is " + passwordString);
-passwordEntry.textContent="Your password is " + parseStr(passwordString);
-
-////something something DOM
