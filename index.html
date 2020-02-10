@@ -12,34 +12,25 @@
     <!-- start of main container -->
     <div class="container">
         <!-- row 1 -->
-        <div class="row  d-flex justify-content-center">
-                <div col="col-12 px-0 ">
+        <div class="row d-flex justify-content-center py-2">
+                <div col="col-12">
                 <header>
                     <span class="h1">JavaScript Generator</span>
                 </header>
             </div>
         </div>
         <!-- row 2 -->
-        <div class="row bg-white shadow-sm p-2 d-flex justify-content-center">
-            <!-- <div class="row">
-                <div class="col">
-                    <p>
-                        To generate a password, hit the "generate password" button below. 
-                        You will be asked what types of characters you want to include. Please select at least one character.
-                        Your resulting password will display below.
-                    </p>
-                </div>
-            </div> -->
+        <div class="row bg-white shadow-sm py-2 ">
             <div class="col">
                 <form>
-                    <label for="generateButton"> To generate a password, hit the "generate password" button below. 
-                        You will be asked what types of characters you want to include. Please select at least one character.
+                    <label for="generateButton" class="text-justify"> To generate a password, hit the "generate password" button below. 
+                        You will be asked what types of characters you want to include. Please select at least one type character and a length between 8 and 120 characters.
                         Your resulting password will display below.</label>
-                    <div class="col">
+                    <div class="col d-flex justify-content-center">
                         <button type="button" autofocus id="generateButton" class="btn btn-primary form-group row">Generate Password</button>
                     </div>
-                    <div class="col">
-                        <textarea id="passwordEntry" class="form-group row" cols=21>Password Output</textarea>
+                    <div class="col d-flex justify-content-center">
+                        <textarea id="passwordEntry" class="form-group row text-center" cols=40 rows=10>Password Output</textarea>
                     </div>
                 </form>
             </div>
