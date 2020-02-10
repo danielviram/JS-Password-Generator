@@ -64,4 +64,8 @@ Checkboxes could be used to select what kinds of values should be included in th
 
 The index could also be modified to be more inline with any potential portfolio website. 
 
+<<<<<<< HEAD
 A second button could also be added to copy the contents of the password into the clipboard.
+=======
+A second button could also be added to copy the contents of the password into the clipboard.
+>>>>>>> 38100d05b69ed0a1f26a2dad581f6b476cb5d30b
