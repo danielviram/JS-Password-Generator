@@ -54,18 +54,14 @@ To satisfy the seventh criteria, the script modifies the HTML page to display th
 
 ## Issues
 
-The password entry does not check for undefined strings. Attempts to correct this created an infinite loop. A possible workaround would be to use a form with a number box, which would keep incoming values as numbers within a predefined range.
+The password length prompt does not check for undefined lengths. Attempts to correct this created an infinite loop. A possible workaround would be to use a form with a number box, which would keep incoming values as numbers within a predefined range.
 
 ## Future Developments
 
 Along with the previous idea of using a form with a number box, there are other improvements that could be made outside of the scope of the assignment
 
-Checkboxes could be used to select what kinds of values should be included in the password generation and a text area box could be used for password display. Approrpiate form aria attributes could also be used to improve the accessibility of the page.
+Checkboxes could be used to select what kinds of values should be included in the password generation and a text area box could be used for password display. Approrpriate form aria attributes could also be used to improve the accessibility of the page.
 
-The index could also be modified to be more inline with any potential portfolio website. 
+The HTML page could also be modified to be more inline with any potential portfolio website. 
 
-<<<<<<< HEAD
 A second button could also be added to copy the contents of the password into the clipboard.
-=======
-A second button could also be added to copy the contents of the password into the clipboard.
->>>>>>> 38100d05b69ed0a1f26a2dad581f6b476cb5d30b
